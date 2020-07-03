@@ -17,6 +17,7 @@ def energia_kinetyczna(H: float, m: float):
 
 
 def wyswietl_wynik(E: float, m: float, H: float):
+    print("Wynik")
     print("Masa: ", m, "kg")
     print("Wysokość: ", H, "m")
     print("Energia kinetyczna: ", E, "J")
@@ -26,13 +27,18 @@ def main():
     try:
         m: float
         H: float
-        m = input("Podaj mase: ")
-        H = input("Podaj wyoskość: ")
+        print("Dane")
+        m = float(input("Podaj mase: "))
+        H = float(input("Podaj wyoskość: "))
         E = energia_kinetyczna(H, m)
         wyswietl_wynik(E, m, H)
-    except TypeError:
-        print("Wprowadzono nieprawidłowe dane.")
+        return True
+    except ValueError:
+        print("Wystąpił bład w danych wejściowych")
+        return False
 
 
 if __name__ == "__main__":
-    main()
+    t = main()
+    while t == False:
+        t = main()
