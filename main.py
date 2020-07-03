@@ -23,10 +23,15 @@ def wyswietl_wynik(E: float, m: float, H: float):
 
 
 def main():
-    m = input("Podaj mase: ")
-    H = input("Podaj wyoskość: ")
-    E = energia_kinetyczna(H, m)
-    wyswietl_wynik(E, m, H)
+    try:
+        m: float
+        H: float
+        m = input("Podaj mase: ")
+        H = input("Podaj wyoskość: ")
+        E = energia_kinetyczna(H, m)
+        wyswietl_wynik(E, m, H)
+    except TypeError:
+        print("Wprowadzono nieprawidłowe dane.")
 
 
 if __name__ == "__main__":
