@@ -15,12 +15,16 @@ def energia_kinetyczna(H: float, m: float):
     E = E / 2
     return E
 
+# Wyświetlanie wyników.
+
 
 def wyswietl_wynik(E: float, m: float, H: float):
     print("Wynik")
     print("Masa: ", m, "kg")
     print("Wysokość: ", H, "m")
     print("Energia kinetyczna: ", E, "J")
+
+# Funkcja kotrolująca pobranie danych, przypisanie danych do obliczeń i wyświetlanie wyników.
 
 
 def main():
